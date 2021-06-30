@@ -3,14 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		11BE11D9F1059A1C5FC9A201 /* Pods_TodoRIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */; };
 		37CDFF31A8ED19D1E34B4C2C /* Pods_TodoRIBs_TodoRIBsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50FF536D69588D263CABA18 /* Pods_TodoRIBs_TodoRIBsUITests.framework */; };
 		8830DF1403335DFF38354713 /* Pods_TodoRIBsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */; };
-		88D90A252681987400E52BD7 /* TodoRIBsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A242681987400E52BD7 /* TodoRIBsApp.swift */; };
+		884EA498268C287900747581 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA495268C287900747581 /* RootRouter.swift */; };
+		884EA499268C287900747581 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA496268C287900747581 /* RootBuilder.swift */; };
+		884EA49A268C287900747581 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA497268C287900747581 /* RootInteractor.swift */; };
+		884EA49D268C296500747581 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA49C268C296500747581 /* RootViewController.swift */; };
+		884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4BE268C29A100747581 /* AppDelegate.swift */; };
+		884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4C0268C29B600747581 /* SceneDelegate.swift */; };
+		884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4C2268C2FD400747581 /* AppComponent.swift */; };
 		88D90A272681987400E52BD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A262681987400E52BD7 /* ContentView.swift */; };
 		88D90A292681987600E52BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D90A282681987600E52BD7 /* Assets.xcassets */; };
 		88D90A2C2681987600E52BD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D90A2B2681987600E52BD7 /* Preview Assets.xcassets */; };
@@ -43,8 +49,14 @@
 		64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB1F8D787DAF92374EA8B56 /* Pods-TodoRIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoRIBs.debug.xcconfig"; path = "Target Support Files/Pods-TodoRIBs/Pods-TodoRIBs.debug.xcconfig"; sourceTree = "<group>"; };
+		884EA495268C287900747581 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		884EA496268C287900747581 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		884EA497268C287900747581 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		884EA49C268C296500747581 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		884EA4BE268C29A100747581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		884EA4C0268C29B600747581 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		884EA4C2268C2FD400747581 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		88D90A212681987400E52BD7 /* TodoRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		88D90A242681987400E52BD7 /* TodoRIBsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRIBsApp.swift; sourceTree = "<group>"; };
 		88D90A262681987400E52BD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88D90A282681987600E52BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88D90A2B2681987600E52BD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -95,6 +107,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		884EA49B268C288100747581 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				884EA495268C287900747581 /* RootRouter.swift */,
+				884EA496268C287900747581 /* RootBuilder.swift */,
+				884EA497268C287900747581 /* RootInteractor.swift */,
+				884EA49C268C296500747581 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		88D90A182681987400E52BD7 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +143,7 @@
 		88D90A232681987400E52BD7 /* TodoRIBs */ = {
 			isa = PBXGroup;
 			children = (
+				884EA49B268C288100747581 /* Root */,
 				88D90A4F2681988500E52BD7 /* AppStart */,
 				88D90A5A26819B5000E52BD7 /* Main */,
 				88D90A262681987400E52BD7 /* ContentView.swift */,
@@ -159,7 +183,9 @@
 		88D90A4F2681988500E52BD7 /* AppStart */ = {
 			isa = PBXGroup;
 			children = (
-				88D90A242681987400E52BD7 /* TodoRIBsApp.swift */,
+				884EA4BE268C29A100747581 /* AppDelegate.swift */,
+				884EA4C0268C29B600747581 /* SceneDelegate.swift */,
+				884EA4C2268C2FD400747581 /* AppComponent.swift */,
 			);
 			path = AppStart;
 			sourceTree = "<group>";
@@ -185,7 +211,6 @@
 				F9BC20A090511C749DE89D73 /* Pods-TodoRIBsTests.debug.xcconfig */,
 				9F5CD3D3721DF79176071238 /* Pods-TodoRIBsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -454,12 +479,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */,
+				884EA49D268C296500747581 /* RootViewController.swift in Sources */,
 				88D90A272681987400E52BD7 /* ContentView.swift in Sources */,
-				88D90A252681987400E52BD7 /* TodoRIBsApp.swift in Sources */,
 				88D90A5626819B4A00E52BD7 /* MainRouter.swift in Sources */,
 				88D90A5726819B4A00E52BD7 /* MainViewController.swift in Sources */,
+				884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */,
+				884EA498268C287900747581 /* RootRouter.swift in Sources */,
 				88D90A5826819B4A00E52BD7 /* MainBuilder.swift in Sources */,
+				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
+				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
 				88D90A5926819B4A00E52BD7 /* MainInteractor.swift in Sources */,
+				884EA499268C287900747581 /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
