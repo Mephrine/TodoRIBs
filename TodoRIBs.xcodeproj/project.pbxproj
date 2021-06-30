@@ -17,9 +17,7 @@
 		884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4BE268C29A100747581 /* AppDelegate.swift */; };
 		884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4C0268C29B600747581 /* SceneDelegate.swift */; };
 		884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4C2268C2FD400747581 /* AppComponent.swift */; };
-		88D90A272681987400E52BD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A262681987400E52BD7 /* ContentView.swift */; };
 		88D90A292681987600E52BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D90A282681987600E52BD7 /* Assets.xcassets */; };
-		88D90A2C2681987600E52BD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D90A2B2681987600E52BD7 /* Preview Assets.xcassets */; };
 		88D90A372681987700E52BD7 /* TodoRIBsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A362681987700E52BD7 /* TodoRIBsTests.swift */; };
 		88D90A422681987700E52BD7 /* TodoRIBsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A412681987700E52BD7 /* TodoRIBsUITests.swift */; };
 		88D90A5626819B4A00E52BD7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5226819B4900E52BD7 /* MainRouter.swift */; };
@@ -57,9 +55,7 @@
 		884EA4C0268C29B600747581 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		884EA4C2268C2FD400747581 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		88D90A212681987400E52BD7 /* TodoRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		88D90A262681987400E52BD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88D90A282681987600E52BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		88D90A2B2681987600E52BD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88D90A2D2681987600E52BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D90A322681987700E52BD7 /* TodoRIBsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoRIBsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D90A362681987700E52BD7 /* TodoRIBsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRIBsTests.swift; sourceTree = "<group>"; };
@@ -146,20 +142,10 @@
 				884EA49B268C288100747581 /* Root */,
 				88D90A4F2681988500E52BD7 /* AppStart */,
 				88D90A5A26819B5000E52BD7 /* Main */,
-				88D90A262681987400E52BD7 /* ContentView.swift */,
 				88D90A282681987600E52BD7 /* Assets.xcassets */,
 				88D90A2D2681987600E52BD7 /* Info.plist */,
-				88D90A2A2681987600E52BD7 /* Preview Content */,
 			);
 			path = TodoRIBs;
-			sourceTree = "<group>";
-		};
-		88D90A2A2681987600E52BD7 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				88D90A2B2681987600E52BD7 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		88D90A352681987700E52BD7 /* TodoRIBsTests */ = {
@@ -333,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88D90A2C2681987600E52BD7 /* Preview Assets.xcassets in Resources */,
 				88D90A292681987600E52BD7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,7 +466,6 @@
 			files = (
 				884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */,
 				884EA49D268C296500747581 /* RootViewController.swift in Sources */,
-				88D90A272681987400E52BD7 /* ContentView.swift in Sources */,
 				88D90A5626819B4A00E52BD7 /* MainRouter.swift in Sources */,
 				88D90A5726819B4A00E52BD7 /* MainViewController.swift in Sources */,
 				884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */,
