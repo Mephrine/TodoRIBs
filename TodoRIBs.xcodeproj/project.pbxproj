@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		11BE11D9F1059A1C5FC9A201 /* Pods_TodoRIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */; };
 		37CDFF31A8ED19D1E34B4C2C /* Pods_TodoRIBs_TodoRIBsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50FF536D69588D263CABA18 /* Pods_TodoRIBs_TodoRIBsUITests.framework */; };
+		51589D732696037300232F35 /* RootComponent+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D722696037300232F35 /* RootComponent+Main.swift */; };
 		8830DF1403335DFF38354713 /* Pods_TodoRIBsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */; };
 		884EA498268C287900747581 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA495268C287900747581 /* RootRouter.swift */; };
 		884EA499268C287900747581 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA496268C287900747581 /* RootBuilder.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51589D722696037300232F35 /* RootComponent+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Main.swift"; sourceTree = "<group>"; };
 		64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB1F8D787DAF92374EA8B56 /* Pods-TodoRIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoRIBs.debug.xcconfig"; path = "Target Support Files/Pods-TodoRIBs/Pods-TodoRIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				884EA496268C287900747581 /* RootBuilder.swift */,
 				884EA497268C287900747581 /* RootInteractor.swift */,
 				884EA49C268C296500747581 /* RootViewController.swift */,
+				51589D722696037300232F35 /* RootComponent+Main.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
 				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
 				88D90A5926819B4A00E52BD7 /* MainInteractor.swift in Sources */,
+				51589D732696037300232F35 /* RootComponent+Main.swift in Sources */,
 				884EA499268C287900747581 /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,11 +641,12 @@
 				DEVELOPMENT_TEAM = DLY5388CL9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoRIBs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mephrine.TodoRIBs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -660,11 +665,12 @@
 				DEVELOPMENT_TEAM = DLY5388CL9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoRIBs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mephrine.TodoRIBs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

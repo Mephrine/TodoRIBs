@@ -6,6 +6,7 @@
 //
 
 import RIBs
+import AsyncDisplayKit
 
 protocol MainDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
@@ -30,8 +31,8 @@ final class MainBuilder: Builder<MainDependency>, MainBuildable {
     }
 
     func build(withListener listener: MainListener) -> MainRouting {
-        let component = MainComponent(dependency: dependency)
-        let viewController = MainViewController()
+      _ = MainComponent(dependency: dependency)
+      let viewController = MainViewController()
         let interactor = MainInteractor(presenter: viewController)
         interactor.listener = listener
         return MainRouter(interactor: interactor, viewController: viewController)

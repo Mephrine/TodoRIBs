@@ -7,25 +7,31 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable {
+protocol RootInteractable: Interactable, MainListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
 
 protocol RootViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy. Since
-    // this RIB does not own its own view, this protocol is conformed to by one of this
-    // RIB's ancestor RIBs' view.
+  func present(viewController: ViewControllable)
 }
 
-final class RootRouter: Router<RootInteractable>, RootRouting {
+final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    init(interactor: RootInteractable, viewController: RootViewControllable) {
-        self.viewController = viewController
-        super.init(interactor: interactor)
+    init(interactor: RootInteractable,
+         viewController: RootViewControllable,
+         mainBuilder: MainBuildable) {
+        self.mainBuilder = mainBuilder
+      super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
+  
+  override func didLoad() {
+    super.didLoad()
+    
+    routerToMain()
+  }
 
     func cleanupViews() {
         // TODO: Since this router does not own its view, it needs to cleanup the views
@@ -33,6 +39,13 @@ final class RootRouter: Router<RootInteractable>, RootRouting {
     }
 
     // MARK: - Private
-
-    private let viewController: RootViewControllable
+  private let mainBuilder: MainBuildable
+  private var main: MainRouting?
+  
+  private func routerToMain() {
+    let mainRouting = mainBuilder.build(withListener: interactor)
+    self.main = mainRouting
+    attachChild(mainRouting)
+    viewController.present(viewController: mainRouting.viewControllable)
+  }
 }

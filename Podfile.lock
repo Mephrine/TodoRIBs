@@ -9,11 +9,46 @@ PODS:
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Nimble (9.2.0)
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.3):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
   - Quick (4.0.0)
   - RIBs (0.9.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
   - SwiftLint (0.43.1)
+  - Texture (3.0.0):
+    - Texture/AssetsLibrary (= 3.0.0)
+    - Texture/Core (= 3.0.0)
+    - Texture/MapKit (= 3.0.0)
+    - Texture/Photos (= 3.0.0)
+    - Texture/PINRemoteImage (= 3.0.0)
+    - Texture/Video (= 3.0.0)
+  - Texture/AssetsLibrary (3.0.0):
+    - Texture/Core
+  - Texture/Core (3.0.0)
+  - Texture/MapKit (3.0.0):
+    - Texture/Core
+  - Texture/Photos (3.0.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.0.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.0.0):
+    - Texture/Core
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift
@@ -23,6 +58,7 @@ DEPENDENCIES:
   - Quick
   - RIBs
   - SwiftLint
+  - Texture
 
 SPEC REPOS:
   trunk:
@@ -31,10 +67,14 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - Nimble
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
     - Quick
     - RIBs
     - RxSwift
     - SwiftLint
+    - Texture
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -42,11 +82,15 @@ SPEC CHECKSUMS:
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   RIBs: 879184fbca567425c488d6b3d14a9c5abfbf9d47
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
 
-PODFILE CHECKSUM: 04785c1daf479c2a997aca0aa92b1a5097e388f7
+PODFILE CHECKSUM: 8d9d14dc0c0a15c5cadd55dc3179c95c334d2d66
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0

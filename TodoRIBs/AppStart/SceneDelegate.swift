@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RIBs
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -24,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       
       let launchRouter = RootBuilder(dependency: AppComponent()).build()
       self.launchRouter = launchRouter
-      launchRouter.launch(from: window)
+      launchRouter.launchFromWindow(window)
     }
   }
 

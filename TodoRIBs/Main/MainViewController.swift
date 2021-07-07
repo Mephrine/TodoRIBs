@@ -7,7 +7,7 @@
 
 import RIBs
 import RxSwift
-import UIKit
+import AsyncDisplayKit
 
 protocol MainPresentableListener: AnyObject {
     // TODO: Declare properties and methods that the view controller can invoke to perform
@@ -15,7 +15,15 @@ protocol MainPresentableListener: AnyObject {
     // interactor class.
 }
 
-final class MainViewController: UIViewController, MainPresentable, MainViewControllable {
+final class MainViewController: ASDKViewController<ASDisplayNode>, MainPresentable, MainViewControllable {
 
     weak var listener: MainPresentableListener?
+  
+  override init() {
+    super.init(node: ASDisplayNode())
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 }
