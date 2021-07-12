@@ -17,6 +17,7 @@ target 'TodoRIBs' do
   # Misc.
   pod 'SwiftLint'
   pod 'CocoaLumberjack/Swift'
+  pod 'Then'
 
   target 'TodoRIBsTests' do
     inherit! :search_paths
@@ -25,9 +26,4 @@ target 'TodoRIBs' do
     pod 'Quick'
     pod 'Nimble'
   end
-
-  target 'TodoRIBsUITests' do
-    # Pods for testing
-  end
-
 end
