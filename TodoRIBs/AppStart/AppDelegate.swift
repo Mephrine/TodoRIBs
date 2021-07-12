@@ -8,11 +8,11 @@
 import UIKit
 import RIBs
 import RxSwift
+import Firebase
 
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
     if #available(iOS 13.0, *) {} else {
       let window = UIWindow(frame: UIScreen.main.bounds)
       
@@ -20,6 +20,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
       self.launchRouter = launchRouter
       launchRouter.launchFromWindow(window)
     }
+    
+    configureFirebase()
     
     return true
   }
@@ -40,6 +42,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
   
   private var launchRouter: LaunchRouting?
+  
+  private func configureFirebase() {
+    FirebaseApp.configure()
+  }
 
 }
 
