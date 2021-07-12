@@ -20,7 +20,11 @@ final class MainViewController: ASDKViewController<ASDisplayNode>, MainPresentab
     weak var listener: MainPresentableListener?
   
   override init() {
-    super.init(node: ASDisplayNode())
+    let displayNode = ASDisplayNode()
+    displayNode.backgroundColor = .white
+    displayNode.automaticallyManagesSubnodes = true
+    super.init(node: displayNode)
+    
   }
   
   required init?(coder: NSCoder) {

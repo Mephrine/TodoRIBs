@@ -10,6 +10,9 @@
 		11BE11D9F1059A1C5FC9A201 /* Pods_TodoRIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */; };
 		37CDFF31A8ED19D1E34B4C2C /* Pods_TodoRIBs_TodoRIBsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50FF536D69588D263CABA18 /* Pods_TodoRIBs_TodoRIBsUITests.framework */; };
 		51589D732696037300232F35 /* RootComponent+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D722696037300232F35 /* RootComponent+Main.swift */; };
+		51589D75269BDA2700232F35 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D74269BDA2700232F35 /* main.swift */; };
+		51589D78269BDA9D00232F35 /* StubAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D77269BDA9D00232F35 /* StubAppDelegate.swift */; };
+		51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */; };
 		8830DF1403335DFF38354713 /* Pods_TodoRIBsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */; };
 		884EA498268C287900747581 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA495268C287900747581 /* RootRouter.swift */; };
 		884EA499268C287900747581 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA496268C287900747581 /* RootBuilder.swift */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		51589D722696037300232F35 /* RootComponent+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Main.swift"; sourceTree = "<group>"; };
+		51589D74269BDA2700232F35 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		51589D77269BDA9D00232F35 /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
+		51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RIBs.swift"; sourceTree = "<group>"; };
 		64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB1F8D787DAF92374EA8B56 /* Pods-TodoRIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoRIBs.debug.xcconfig"; path = "Target Support Files/Pods-TodoRIBs/Pods-TodoRIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +111,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51589D76269BDA8700232F35 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				51589D77269BDA9D00232F35 /* StubAppDelegate.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		51589D79269BFB8200232F35 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		884EA49B268C288100747581 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,8 +164,9 @@
 		88D90A232681987400E52BD7 /* TodoRIBs */ = {
 			isa = PBXGroup;
 			children = (
-				884EA49B268C288100747581 /* Root */,
+				51589D79269BFB8200232F35 /* Extension */,
 				88D90A4F2681988500E52BD7 /* AppStart */,
+				884EA49B268C288100747581 /* Root */,
 				88D90A5A26819B5000E52BD7 /* Main */,
 				88D90A282681987600E52BD7 /* Assets.xcassets */,
 				88D90A2D2681987600E52BD7 /* Info.plist */,
@@ -154,6 +177,7 @@
 		88D90A352681987700E52BD7 /* TodoRIBsTests */ = {
 			isa = PBXGroup;
 			children = (
+				51589D76269BDA8700232F35 /* AppStart */,
 				88D90A362681987700E52BD7 /* TodoRIBsTests.swift */,
 				88D90A382681987700E52BD7 /* Info.plist */,
 			);
@@ -175,6 +199,7 @@
 				884EA4BE268C29A100747581 /* AppDelegate.swift */,
 				884EA4C0268C29B600747581 /* SceneDelegate.swift */,
 				884EA4C2268C2FD400747581 /* AppComponent.swift */,
+				51589D74269BDA2700232F35 /* main.swift */,
 			);
 			path = AppStart;
 			sourceTree = "<group>";
@@ -468,11 +493,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */,
+				51589D75269BDA2700232F35 /* main.swift in Sources */,
 				884EA49D268C296500747581 /* RootViewController.swift in Sources */,
 				88D90A5626819B4A00E52BD7 /* MainRouter.swift in Sources */,
 				88D90A5726819B4A00E52BD7 /* MainViewController.swift in Sources */,
 				884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */,
 				884EA498268C287900747581 /* RootRouter.swift in Sources */,
+				51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */,
 				88D90A5826819B4A00E52BD7 /* MainBuilder.swift in Sources */,
 				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
 				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
@@ -494,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51589D78269BDA9D00232F35 /* StubAppDelegate.swift in Sources */,
 				88D90A422681987700E52BD7 /* TodoRIBsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,7 +593,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -620,7 +648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

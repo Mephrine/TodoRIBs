@@ -12,23 +12,29 @@ protocol RootPresentableListener: AnyObject {
   
 }
 
-class RootViewController: ASNavigationController, RootPresentable, RootViewControllable {
+final class RootViewController: ASDKViewController<ASDisplayNode>, RootPresentable, RootViewControllable {
   weak var listener: RootPresentableListener?
   
-  init() {
-    super.init(nibName: nil, bundle: nil)
+  override init() {
+    let displayNode = ASDisplayNode()
+    displayNode.backgroundColor = .white
+    displayNode.automaticallyManagesSubnodes = true
+    super.init(node: displayNode)
   }
   
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("Method is not supported")
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.backgroundColor = UIColor.white
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
   }
   
   func present(viewController: ViewControllable) {
-      present(viewController.uiviewController, animated: true, completion: nil)
+    viewController.uiviewController.modalPresentationStyle = .fullScreen
+    present(viewController.uiviewController, animated: false, completion: nil)
   }
+  
+  func dismiss(viewController: ViewControllable) {
+    if presentedViewController === viewController.uiviewController {
+      dismiss(animated: true, completion: nil)
+    }
+  }
+  
 }
