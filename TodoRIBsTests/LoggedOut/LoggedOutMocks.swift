@@ -1,8 +1,8 @@
 //
-//  TodoRIBsTests.swift
+//  LoggedOutMocks.swift
 //  TodoRIBsTests
 //
-//  Created by Mephrine on 2021/06/22.
+//  Created by Mephrine on 2021/07/12.
 //
 
 @testable import TodoRIBs
@@ -51,7 +51,7 @@ class LoggedOutInteractableMock: LoggedOutInteractable {
   }
 }
 
-class LoggedOutViewControllableMock: LoggedOutViewControllable {
+class LoggedOutViewControllableMock: LoggedOutViewControllable, LoggedOutPresentable {
   // Variables
   var uiviewController: UIViewController = UIViewController() { didSet { uiviewControllerSetCallCount += 1 } }
   var uiviewControllerSetCallCount = 0
@@ -60,16 +60,21 @@ class LoggedOutViewControllableMock: LoggedOutViewControllable {
     
   // Function Handlers
   var failedLoginHandler: (() -> Void)?
-  var failedLoginCount: Int = 0
+  var failedLoginError: LoginError? = nil
   
   init() {
   }
   
-  func failedLogin() {
-    failedLoginCount += 1
+  func failedLogin(error: LoginError) {
+    failedLoginError = error
     if let failedLoginHandler = failedLoginHandler {
       return failedLoginHandler()
     }
+  }
+}
+
+class LoggedOutListenerMocks: LoggedOutListener {
+  func login() {
   }
 }
 
@@ -149,79 +154,5 @@ class LoggedOutBuildableMock: LoggedOutBuildable {
       return buildHandler(listener)
     }
     fatalError("Function build returns a value that can't be handled with a default value and its handler must be set")
-  }
-}
-
-class RootInteractableMock: RootInteractable {
-  // Variables
-  var router: RootRouting? { didSet { routerSetCallCount += 1 } }
-  var routerSetCallCount = 0
-  var listener: RootListener? { didSet { listenerSetCallCount += 1 } }
-  var listenerSetCallCount = 0
-  var isActive: Bool = false { didSet { isActiveSetCallCount += 1 } }
-  var isActiveSetCallCount = 0
-  var isActiveStreamSubject: PublishSubject<Bool> = PublishSubject<Bool>() { didSet { isActiveStreamSubjectSetCallCount += 1 } }
-  var isActiveStreamSubjectSetCallCount = 0
-  var isActiveStream: Observable<Bool> { return isActiveStreamSubject }
-  
-  // Function Handlers
-  var activateHandler: (() -> Void)?
-  var activateCallCount: Int = 0
-  var deactivateHandler: (() -> Void)?
-  var deactivateCallCount: Int = 0
-  var didLoginHandler: (() -> Void)?
-  var didLoginCallCount: Int = 0
-  
-  init() {
-  }
-  
-  func activate() {
-    activateCallCount += 1
-    if let activateHandler = activateHandler {
-      return activateHandler()
-    }
-  }
-  
-  func deactivate() {
-    deactivateCallCount += 1
-    if let deactivateHandler = deactivateHandler {
-      return deactivateHandler()
-    }
-  }
-  
-  func didLogin() {
-    didLoginCallCount += 1
-    if let didLoginHandler = didLoginHandler {
-      return didLoginHandler()
-    }
-  }
-}
-
-class RootViewControllableMock: RootViewControllable {
-  // Variables
-  var uiviewController: UIViewController = UIViewController() { didSet { uiviewControllerSetCallCount += 1 } }
-  var uiviewControllerSetCallCount = 0
-  
-  // Function Handlers
-  var presentHandler: ((_ viewController: ViewControllable) -> ())?
-  var presentCallCount: Int = 0
-  var dismissHandler: ((_ viewController: ViewControllable) -> ())?
-  var dismissCallCount: Int = 0
-  
-  init() {
-  }
-  
-  func present(viewController: ViewControllable) {
-    presentCallCount += 1
-    if let presentHandler = presentHandler {
-      return presentHandler(viewController)
-    }
-  }
-  
-  func dismiss(viewController: ViewControllable) {
-    dismissCallCount += 1
-    if let dismissHandler = dismissHandler {
-      return dismissHandler(viewController)
-    }
   }
 }

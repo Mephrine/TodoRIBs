@@ -11,6 +11,10 @@
 		51335D21269C14610058DF3E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 51335D20269C14610058DF3E /* FirebaseAuth */; };
 		5148B9ED269C26FF00DDD9C1 /* RootRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148B9EB269C26FF00DDD9C1 /* RootRouterTests.swift */; };
 		5148B9EE269C37DD00DDD9C1 /* StubAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D77269BDA9D00232F35 /* StubAppDelegate.swift */; };
+		5148B9F2269C3A4200DDD9C1 /* LoggedOutInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148B9F0269C3A4100DDD9C1 /* LoggedOutInteractorTests.swift */; };
+		5148B9F3269C3A4200DDD9C1 /* LoggedOutRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148B9F1269C3A4100DDD9C1 /* LoggedOutRouterTests.swift */; };
+		5148B9F5269C3EBF00DDD9C1 /* LoggedOutMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148B9F4269C3EBF00DDD9C1 /* LoggedOutMocks.swift */; };
+		5148B9F9269C7CC400DDD9C1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148B9F8269C7CC300DDD9C1 /* Logger.swift */; };
 		51589D732696037300232F35 /* RootComponent+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D722696037300232F35 /* RootComponent+Main.swift */; };
 		51589D75269BDA2700232F35 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D74269BDA2700232F35 /* main.swift */; };
 		51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */; };
@@ -24,7 +28,7 @@
 		884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4C0268C29B600747581 /* SceneDelegate.swift */; };
 		884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA4C2268C2FD400747581 /* AppComponent.swift */; };
 		88D90A292681987600E52BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D90A282681987600E52BD7 /* Assets.xcassets */; };
-		88D90A372681987700E52BD7 /* TodoRIBsMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A362681987700E52BD7 /* TodoRIBsMocks.swift */; };
+		88D90A372681987700E52BD7 /* RootMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A362681987700E52BD7 /* RootMocks.swift */; };
 		88D90A5626819B4A00E52BD7 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5226819B4900E52BD7 /* LoggedOutRouter.swift */; };
 		88D90A5726819B4A00E52BD7 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5326819B4A00E52BD7 /* LoggedOutViewController.swift */; };
 		88D90A5826819B4A00E52BD7 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5426819B4A00E52BD7 /* LoggedOutBuilder.swift */; };
@@ -43,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		5148B9EB269C26FF00DDD9C1 /* RootRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterTests.swift; sourceTree = "<group>"; };
+		5148B9F0269C3A4100DDD9C1 /* LoggedOutInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractorTests.swift; sourceTree = "<group>"; };
+		5148B9F1269C3A4100DDD9C1 /* LoggedOutRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouterTests.swift; sourceTree = "<group>"; };
+		5148B9F4269C3EBF00DDD9C1 /* LoggedOutMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutMocks.swift; sourceTree = "<group>"; };
+		5148B9F8269C7CC300DDD9C1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		51589D722696037300232F35 /* RootComponent+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Main.swift"; sourceTree = "<group>"; };
 		51589D74269BDA2700232F35 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		51589D77269BDA9D00232F35 /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +70,7 @@
 		88D90A282681987600E52BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88D90A2D2681987600E52BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D90A322681987700E52BD7 /* TodoRIBsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoRIBsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88D90A362681987700E52BD7 /* TodoRIBsMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRIBsMocks.swift; sourceTree = "<group>"; };
+		88D90A362681987700E52BD7 /* RootMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMocks.swift; sourceTree = "<group>"; };
 		88D90A382681987700E52BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D90A5226819B4900E52BD7 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
 		88D90A5326819B4A00E52BD7 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
@@ -100,9 +108,28 @@
 		51335D22269C1F520058DF3E /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				88D90A362681987700E52BD7 /* RootMocks.swift */,
 				5148B9EB269C26FF00DDD9C1 /* RootRouterTests.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		5148B9EF269C3A3000DDD9C1 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				5148B9F0269C3A4100DDD9C1 /* LoggedOutInteractorTests.swift */,
+				5148B9F1269C3A4100DDD9C1 /* LoggedOutRouterTests.swift */,
+				5148B9F4269C3EBF00DDD9C1 /* LoggedOutMocks.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		5148B9F7269C7CB900DDD9C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5148B9F8269C7CC300DDD9C1 /* Logger.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		51589D76269BDA8700232F35 /* AppStart */ = {
@@ -156,6 +183,7 @@
 		88D90A232681987400E52BD7 /* TodoRIBs */ = {
 			isa = PBXGroup;
 			children = (
+				5148B9F7269C7CB900DDD9C1 /* Utils */,
 				51589D79269BFB8200232F35 /* Extension */,
 				88D90A4F2681988500E52BD7 /* AppStart */,
 				884EA49B268C288100747581 /* Root */,
@@ -170,9 +198,9 @@
 		88D90A352681987700E52BD7 /* TodoRIBsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5148B9EF269C3A3000DDD9C1 /* LoggedOut */,
 				51335D22269C1F520058DF3E /* Root */,
 				51589D76269BDA8700232F35 /* AppStart */,
-				88D90A362681987700E52BD7 /* TodoRIBsMocks.swift */,
 				88D90A382681987700E52BD7 /* Info.plist */,
 			);
 			path = TodoRIBsTests;
@@ -423,6 +451,7 @@
 				51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */,
 				88D90A5826819B4A00E52BD7 /* LoggedOutBuilder.swift in Sources */,
 				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
+				5148B9F9269C7CC400DDD9C1 /* Logger.swift in Sources */,
 				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
 				88D90A5926819B4A00E52BD7 /* LoggedOutInteractor.swift in Sources */,
 				51589D732696037300232F35 /* RootComponent+Main.swift in Sources */,
@@ -435,7 +464,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5148B9ED269C26FF00DDD9C1 /* RootRouterTests.swift in Sources */,
-				88D90A372681987700E52BD7 /* TodoRIBsMocks.swift in Sources */,
+				5148B9F2269C3A4200DDD9C1 /* LoggedOutInteractorTests.swift in Sources */,
+				5148B9F5269C3EBF00DDD9C1 /* LoggedOutMocks.swift in Sources */,
+				5148B9F3269C3A4200DDD9C1 /* LoggedOutRouterTests.swift in Sources */,
+				88D90A372681987700E52BD7 /* RootMocks.swift in Sources */,
 				5148B9EE269C37DD00DDD9C1 /* StubAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
