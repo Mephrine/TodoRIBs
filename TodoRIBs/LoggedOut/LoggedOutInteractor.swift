@@ -1,5 +1,5 @@
 //
-//  MainInteractor.swift
+//  LoggedOutInteractor.swift
 //  TodoRIBs
 //
 //  Created by Mephrine on 2021/06/22.
@@ -8,27 +8,27 @@
 import RIBs
 import RxSwift
 
-protocol MainRouting: ViewableRouting {
+protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol MainPresentable: Presentable {
-    var listener: MainPresentableListener? { get set }
+protocol LoggedOutPresentable: Presentable {
+    var listener: LoggedOutPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol MainListener: AnyObject {
+protocol LoggedOutListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteractable, MainPresentableListener {
+final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
 
-    weak var router: MainRouting?
-    weak var listener: MainListener?
+    weak var router: LoggedOutRouting?
+    weak var listener: LoggedOutListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: MainPresentable) {
+    override init(presenter: LoggedOutPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }

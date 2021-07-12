@@ -26,10 +26,10 @@
 		88D90A292681987600E52BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88D90A282681987600E52BD7 /* Assets.xcassets */; };
 		88D90A372681987700E52BD7 /* TodoRIBsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A362681987700E52BD7 /* TodoRIBsTests.swift */; };
 		88D90A422681987700E52BD7 /* TodoRIBsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A412681987700E52BD7 /* TodoRIBsUITests.swift */; };
-		88D90A5626819B4A00E52BD7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5226819B4900E52BD7 /* MainRouter.swift */; };
-		88D90A5726819B4A00E52BD7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5326819B4A00E52BD7 /* MainViewController.swift */; };
-		88D90A5826819B4A00E52BD7 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5426819B4A00E52BD7 /* MainBuilder.swift */; };
-		88D90A5926819B4A00E52BD7 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5526819B4A00E52BD7 /* MainInteractor.swift */; };
+		88D90A5626819B4A00E52BD7 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5226819B4900E52BD7 /* LoggedOutRouter.swift */; };
+		88D90A5726819B4A00E52BD7 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5326819B4A00E52BD7 /* LoggedOutViewController.swift */; };
+		88D90A5826819B4A00E52BD7 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5426819B4A00E52BD7 /* LoggedOutBuilder.swift */; };
+		88D90A5926819B4A00E52BD7 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D90A5526819B4A00E52BD7 /* LoggedOutInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +74,10 @@
 		88D90A3D2681987700E52BD7 /* TodoRIBsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoRIBsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D90A412681987700E52BD7 /* TodoRIBsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRIBsUITests.swift; sourceTree = "<group>"; };
 		88D90A432681987700E52BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88D90A5226819B4900E52BD7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		88D90A5326819B4A00E52BD7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		88D90A5426819B4A00E52BD7 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
-		88D90A5526819B4A00E52BD7 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		88D90A5226819B4900E52BD7 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		88D90A5326819B4A00E52BD7 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		88D90A5426819B4A00E52BD7 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		88D90A5526819B4A00E52BD7 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		9F5CD3D3721DF79176071238 /* Pods-TodoRIBsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoRIBsTests.release.xcconfig"; path = "Target Support Files/Pods-TodoRIBsTests/Pods-TodoRIBsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4FCEAC8FE222FE6A5292823 /* Pods-TodoRIBs-TodoRIBsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoRIBs-TodoRIBsUITests.release.xcconfig"; path = "Target Support Files/Pods-TodoRIBs-TodoRIBsUITests/Pods-TodoRIBs-TodoRIBsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E50FF536D69588D263CABA18 /* Pods_TodoRIBs_TodoRIBsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBs_TodoRIBsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +171,7 @@
 				51589D79269BFB8200232F35 /* Extension */,
 				88D90A4F2681988500E52BD7 /* AppStart */,
 				884EA49B268C288100747581 /* Root */,
-				88D90A5A26819B5000E52BD7 /* Main */,
+				88D90A5A26819B5000E52BD7 /* LoggedOut */,
 				88D90A282681987600E52BD7 /* Assets.xcassets */,
 				88D90A2D2681987600E52BD7 /* Info.plist */,
 				51589DBA269C109900232F35 /* GoogleService-Info.plist */,
@@ -209,15 +209,15 @@
 			path = AppStart;
 			sourceTree = "<group>";
 		};
-		88D90A5A26819B5000E52BD7 /* Main */ = {
+		88D90A5A26819B5000E52BD7 /* LoggedOut */ = {
 			isa = PBXGroup;
 			children = (
-				88D90A5226819B4900E52BD7 /* MainRouter.swift */,
-				88D90A5326819B4A00E52BD7 /* MainViewController.swift */,
-				88D90A5426819B4A00E52BD7 /* MainBuilder.swift */,
-				88D90A5526819B4A00E52BD7 /* MainInteractor.swift */,
+				88D90A5226819B4900E52BD7 /* LoggedOutRouter.swift */,
+				88D90A5326819B4A00E52BD7 /* LoggedOutViewController.swift */,
+				88D90A5426819B4A00E52BD7 /* LoggedOutBuilder.swift */,
+				88D90A5526819B4A00E52BD7 /* LoggedOutInteractor.swift */,
 			);
-			path = Main;
+			path = LoggedOut;
 			sourceTree = "<group>";
 		};
 		8CAD4A6D5EE84A2382FA7AF9 /* Pods */ = {
@@ -507,15 +507,15 @@
 				884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */,
 				51589D75269BDA2700232F35 /* main.swift in Sources */,
 				884EA49D268C296500747581 /* RootViewController.swift in Sources */,
-				88D90A5626819B4A00E52BD7 /* MainRouter.swift in Sources */,
-				88D90A5726819B4A00E52BD7 /* MainViewController.swift in Sources */,
+				88D90A5626819B4A00E52BD7 /* LoggedOutRouter.swift in Sources */,
+				88D90A5726819B4A00E52BD7 /* LoggedOutViewController.swift in Sources */,
 				884EA4C3268C2FD400747581 /* AppComponent.swift in Sources */,
 				884EA498268C287900747581 /* RootRouter.swift in Sources */,
 				51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */,
-				88D90A5826819B4A00E52BD7 /* MainBuilder.swift in Sources */,
+				88D90A5826819B4A00E52BD7 /* LoggedOutBuilder.swift in Sources */,
 				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
 				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
-				88D90A5926819B4A00E52BD7 /* MainInteractor.swift in Sources */,
+				88D90A5926819B4A00E52BD7 /* LoggedOutInteractor.swift in Sources */,
 				51589D732696037300232F35 /* RootComponent+Main.swift in Sources */,
 				884EA499268C287900747581 /* RootBuilder.swift in Sources */,
 			);

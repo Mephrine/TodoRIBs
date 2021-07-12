@@ -1,5 +1,5 @@
 //
-//  RootComponent+Main.swift
+//  RootComponent+LoggedOut.swift
 //  TodoRIBs
 //
 //  Created by Mephrine on 2021/07/08.
@@ -7,10 +7,10 @@
 
 import RIBs
 
-protocol RootDependencyMain: Dependency {
+protocol RootDependencyLoggedOut: Dependency {
   
 }
 
-extension RootComponent: MainDependency {
+extension RootComponent: LoggedOutDependency {
   
 }

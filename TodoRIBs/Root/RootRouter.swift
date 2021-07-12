@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, MainListener {
+protocol RootInteractable: Interactable, LoggedOutListener {
   var router: RootRouting? { get set }
   var listener: RootListener? { get set }
 }
@@ -22,8 +22,8 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
   // TODO: Constructor inject child builder protocols to allow building children.
   init(interactor: RootInteractable,
        viewController: RootViewControllable,
-       mainBuilder: MainBuildable) {
-    self.mainBuilder = mainBuilder
+       LoggedOutBuilder: LoggedOutBuildable) {
+    self.LoggedOutBuilder = LoggedOutBuilder
     super.init(interactor: interactor, viewController: viewController)
     interactor.router = self
   }
@@ -31,7 +31,7 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
   override func didLoad() {
     super.didLoad()
     
-    routerToMain()
+    routerToLoggedOut()
   }
   
   func cleanupViews() {
@@ -40,20 +40,20 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
   }
   
   // MARK: - Private
-  private let mainBuilder: MainBuildable
-  private var mainRouting: MainRouting?
+  private let LoggedOutBuilder: LoggedOutBuildable
+  private var LoggedOutRouting: LoggedOutRouting?
   
-  private func routerToMain() {
-    if let mainRouting = mainRouting {
-      detachChild(mainRouting)
-      self.mainRouting = nil
+  private func routerToLoggedOut() {
+    if let LoggedOutRouting = LoggedOutRouting {
+      detachChild(LoggedOutRouting)
+      self.LoggedOutRouting = nil
     }
     
-    let mainRouting = mainBuilder.build(withListener: interactor)
-    self.mainRouting = mainRouting
-    attachChild(mainRouting)
+    let LoggedOutRouting = LoggedOutBuilder.build(withListener: interactor)
+    self.LoggedOutRouting = LoggedOutRouting
+    attachChild(LoggedOutRouting)
     
-    let navigationController = UINavigationController(root: mainRouting.viewControllable)
+    let navigationController = UINavigationController(root: LoggedOutRouting.viewControllable)
     viewController.present(viewController: navigationController)
   }
 }
