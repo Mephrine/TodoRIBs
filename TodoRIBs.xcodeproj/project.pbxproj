@@ -19,6 +19,9 @@
 		51589D75269BDA2700232F35 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D74269BDA2700232F35 /* main.swift */; };
 		51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */; };
 		51589DBB269C109900232F35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51589DBA269C109900232F35 /* GoogleService-Info.plist */; };
+		516DAB32269E84CE006F8A1C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DAB31269E84CE006F8A1C /* AuthManager.swift */; };
+		516DAB36269E8D90006F8A1C /* AuthMangerMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DAB35269E8D90006F8A1C /* AuthMangerMocks.swift */; };
+		51B1556826AA8CE000B5F98A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 51B1556726AA8CE000B5F98A /* FirebaseMessaging */; };
 		8830DF1403335DFF38354713 /* Pods_TodoRIBsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */; };
 		884EA498268C287900747581 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA495268C287900747581 /* RootRouter.swift */; };
 		884EA499268C287900747581 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884EA496268C287900747581 /* RootBuilder.swift */; };
@@ -56,6 +59,9 @@
 		51589D77269BDA9D00232F35 /* StubAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAppDelegate.swift; sourceTree = "<group>"; };
 		51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RIBs.swift"; sourceTree = "<group>"; };
 		51589DBA269C109900232F35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		516DAB31269E84CE006F8A1C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		516DAB35269E8D90006F8A1C /* AuthMangerMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMangerMocks.swift; sourceTree = "<group>"; };
+		51B1556626AA840900B5F98A /* TodoRIBs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoRIBs.entitlements; sourceTree = "<group>"; };
 		64A3A8C01C42ED2730726FFC /* Pods_TodoRIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692431AB8FB88D06F7A0B6D7 /* Pods_TodoRIBsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoRIBsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB1F8D787DAF92374EA8B56 /* Pods-TodoRIBs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoRIBs.debug.xcconfig"; path = "Target Support Files/Pods-TodoRIBs/Pods-TodoRIBs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B1556826AA8CE000B5F98A /* FirebaseMessaging in Frameworks */,
 				11BE11D9F1059A1C5FC9A201 /* Pods_TodoRIBs.framework in Frameworks */,
 				51335D21269C14610058DF3E /* FirebaseAuth in Frameworks */,
 			);
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				5148B9F8269C7CC300DDD9C1 /* Logger.swift */,
+				516DAB31269E84CE006F8A1C /* AuthManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -146,6 +154,14 @@
 				51589D7A269BFBA100232F35 /* UINavigationController+RIBs.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		516DAB34269E8D7F006F8A1C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				516DAB35269E8D90006F8A1C /* AuthMangerMocks.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		884EA49B268C288100747581 /* Root */ = {
@@ -183,6 +199,7 @@
 		88D90A232681987400E52BD7 /* TodoRIBs */ = {
 			isa = PBXGroup;
 			children = (
+				51B1556626AA840900B5F98A /* TodoRIBs.entitlements */,
 				5148B9F7269C7CB900DDD9C1 /* Utils */,
 				51589D79269BFB8200232F35 /* Extension */,
 				88D90A4F2681988500E52BD7 /* AppStart */,
@@ -198,6 +215,7 @@
 		88D90A352681987700E52BD7 /* TodoRIBsTests */ = {
 			isa = PBXGroup;
 			children = (
+				516DAB34269E8D7F006F8A1C /* Utils */,
 				5148B9EF269C3A3000DDD9C1 /* LoggedOut */,
 				51335D22269C1F520058DF3E /* Root */,
 				51589D76269BDA8700232F35 /* AppStart */,
@@ -271,6 +289,7 @@
 			name = TodoRIBs;
 			packageProductDependencies = (
 				51335D20269C14610058DF3E /* FirebaseAuth */,
+				51B1556726AA8CE000B5F98A /* FirebaseMessaging */,
 			);
 			productName = TodoRIBs;
 			productReference = 88D90A212681987400E52BD7 /* TodoRIBs.app */;
@@ -450,6 +469,7 @@
 				884EA498268C287900747581 /* RootRouter.swift in Sources */,
 				51589D7B269BFBA100232F35 /* UINavigationController+RIBs.swift in Sources */,
 				88D90A5826819B4A00E52BD7 /* LoggedOutBuilder.swift in Sources */,
+				516DAB32269E84CE006F8A1C /* AuthManager.swift in Sources */,
 				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
 				5148B9F9269C7CC400DDD9C1 /* Logger.swift in Sources */,
 				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
@@ -466,6 +486,7 @@
 				5148B9ED269C26FF00DDD9C1 /* RootRouterTests.swift in Sources */,
 				5148B9F2269C3A4200DDD9C1 /* LoggedOutInteractorTests.swift in Sources */,
 				5148B9F5269C3EBF00DDD9C1 /* LoggedOutMocks.swift in Sources */,
+				516DAB36269E8D90006F8A1C /* AuthMangerMocks.swift in Sources */,
 				5148B9F3269C3A4200DDD9C1 /* LoggedOutRouterTests.swift in Sources */,
 				88D90A372681987700E52BD7 /* RootMocks.swift in Sources */,
 				5148B9EE269C37DD00DDD9C1 /* StubAppDelegate.swift in Sources */,
@@ -605,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TodoRIBs/TodoRIBs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = DLY5388CL9;
@@ -629,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TodoRIBs/TodoRIBs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = DLY5388CL9;
@@ -741,6 +764,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 51335D1F269C14610058DF3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		51B1556726AA8CE000B5F98A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51335D1F269C14610058DF3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
