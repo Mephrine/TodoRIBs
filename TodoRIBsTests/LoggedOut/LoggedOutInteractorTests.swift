@@ -7,6 +7,7 @@
 
 @testable import TodoRIBs
 import XCTest
+import RxSwift
 
 final class LoggedOutInteractorTests: XCTestCase {
   
@@ -94,14 +95,11 @@ final class LoggedOutInteractorTests: XCTestCase {
     
     XCTAssertFalse(viewController.failedLoginError == LoginError.invalidPasswordFormat)
   }
-  
-  func test_login_success() {
-    // This is an example of an interactor test case.
-    // Test your interactor binds observables and sends messages to router or listener.
-  }
-  
-  func test_login_fail() {
-    
-  }
-  
+//  func test_login_success() {
+//    let login = AuthManagerMocks.login(withEmail: "abcd@aaa.com", password: "Rkskekfk123!")
+//    login.first()
+//  }
+//  func test_login_fail() {
+//
+//  }
 }
