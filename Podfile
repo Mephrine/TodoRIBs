@@ -7,7 +7,10 @@ target 'TodoRIBs' do
 
   # Pods for TodoRIBs
   pod 'RIBs'
-  pod 'Texture'
+#  pod 'Texture'
+
+  # UI
+  pod 'SnapKit'
 
   #Networking
   pod 'Moya'

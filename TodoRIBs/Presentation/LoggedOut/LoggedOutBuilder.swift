@@ -6,7 +6,6 @@
 //
 
 import RIBs
-import AsyncDisplayKit
 
 protocol LoggedOutDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
