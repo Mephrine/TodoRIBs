@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class BaseViewController: UIViewController,
                           HasSetupConstraints,
@@ -13,6 +14,8 @@ class BaseViewController: UIViewController,
   // MARK: - Properties
   var disposeBag = DisposeBag()
   private(set) var didSetupConstraints: Bool = false
+  
+  private let detachAction = PublishRelay<Void>()
   
   // MARK: - Init & Deinit
   init() {
@@ -43,17 +46,16 @@ class BaseViewController: UIViewController,
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    if isMovingFromParent || isBeingDismissed {
-      
-    }
+    guard isMovingFromParent || isBeingDismissed else { return }
+    detachAction.accept(Void())
   }
   
   // MARK: - Inheritance
   func setupUI() {}
   
-  func bindUI() {}
-  
   func setupConstraints() {}
+  
+  func bindUI() {}
   
   // MARK: - Private
   func setupConstraintsIfNeeded() {
