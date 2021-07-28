@@ -13,10 +13,34 @@ protocol LoggedOutPresentableListener: AnyObject {
 }
 
 final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, LoggedOutViewControllable {
+  // MARK: - Constants
+  private enum UI {
+    static let buttonWidth: CGFloat = 100
+    static let buttonHeight: CGFloat = 50
+  }
   
   weak var listener: LoggedOutPresentableListener?
- 
-  func failedLogin(error: LoginError) {
+   
+  
+  // MARK: - Layout
+  override func setupUI() {
+//    let loginButton = UIButton(frame: CGRect.zero)
+  }
+  
+  override func setupConstraints() {
     
   }
+  
+  // MARK: - Binding
+  override func bindUI() {
+    
+  }
+  
+  internal func failedLogin(error: LoginError) {
+    
+  }
+}
+
+extension LoggedOutViewController {
+  
 }
