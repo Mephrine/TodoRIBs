@@ -8,6 +8,8 @@ target 'TodoRIBs' do
   # Pods for TodoRIBs
   pod 'RIBs'
 #  pod 'Texture'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
 
   # UI
   pod 'SnapKit'

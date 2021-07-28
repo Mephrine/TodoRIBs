@@ -3,6 +3,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.2)
   - CocoaLumberjack/Swift (3.7.2):
     - CocoaLumberjack/Core
+  - Differentiator (3.1.0)
   - Kingfisher (6.3.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
@@ -11,6 +12,12 @@ PODS:
   - Nimble (9.2.0)
   - Quick (4.0.0)
   - RIBs (0.9.1):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
   - SnapKit (5.0.1)
@@ -24,6 +31,8 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - RIBs
+  - RxCocoa
+  - RxDataSources
   - SnapKit
   - SwiftLint
   - Then
@@ -32,11 +41,14 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - CocoaLumberjack
+    - Differentiator
     - Kingfisher
     - Moya
     - Nimble
     - Quick
     - RIBs
+    - RxCocoa
+    - RxDataSources
     - RxSwift
     - SnapKit
     - SwiftLint
@@ -45,16 +57,19 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   RIBs: 879184fbca567425c488d6b3d14a9c5abfbf9d47
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 02a220d5c20e54c849716bd04e383926de576d92
+PODFILE CHECKSUM: f492dfec470464c8d1f08c22b04d7341d4f60c38
 
 COCOAPODS: 1.10.0
