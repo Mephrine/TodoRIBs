@@ -78,6 +78,10 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     tryToLogin(email: email!, password: password!)
   }
   
+  func signupButtonTapped() {
+    router?.
+  }
+  
   private func verify(email: String?) -> Bool {
     let emailRegularExpression = "^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"
     return email.isValid(regex: emailRegularExpression)
@@ -96,14 +100,6 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
       } onError: { error in
         self.presenter.failedLogin(error: LoginError.invalidUserInformation)
       }.disposed(by: disposeBag)
-//    Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-//      guard let `self` = self else { return }
-//      if user != nil {
-//        self.listener?.login()
-//      } else {
-//        self.presenter.failedLogin(error: LoginError.invalidUserInformation)
-//      }
-//    }
   }
 }
 

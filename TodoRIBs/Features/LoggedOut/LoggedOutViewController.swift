@@ -12,6 +12,7 @@ import SnapKit
 
 protocol LoggedOutPresentableListener: AnyObject {
   func loginButtonTapped(email: String?, password: String?)
+  func signupButtonTapped()
 }
 
 final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, LoggedOutViewControllable {
@@ -193,6 +194,14 @@ final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, L
       .subscribe { [weak self] email, password in
         guard let self = self else { return }
         self.listener?.loginButtonTapped(email: email, password: password)
+      }.disposed(by: disposeBag)
+    
+    signupButton.rx.tap
+      .asDriver()
+      .throttle(.milliseconds(300))
+      .drive { [weak self] _ in
+        guard let self = self else { return }
+        self.listener?.signupButtonTapped()
       }.disposed(by: disposeBag)
   }
   

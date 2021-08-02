@@ -22,6 +22,10 @@
 		516D00C526AE970A0084552C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D00C426AE970A0084552C /* BaseViewController.swift */; };
 		516DAB32269E84CE006F8A1C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DAB31269E84CE006F8A1C /* AuthManager.swift */; };
 		516DAB36269E8D90006F8A1C /* AuthMangerMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DAB35269E8D90006F8A1C /* AuthMangerMocks.swift */; };
+		51B12BE226B7FECA008D2208 /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B12BDE26B7FECA008D2208 /* SignupRouter.swift */; };
+		51B12BE326B7FECA008D2208 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B12BDF26B7FECA008D2208 /* SignupViewController.swift */; };
+		51B12BE426B7FECA008D2208 /* SignupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B12BE026B7FECA008D2208 /* SignupBuilder.swift */; };
+		51B12BE526B7FECA008D2208 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B12BE126B7FECA008D2208 /* SignupInteractor.swift */; };
 		51B1556826AA8CE000B5F98A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 51B1556726AA8CE000B5F98A /* FirebaseMessaging */; };
 		51F7175226B0181800193DF7 /* ViewControllableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F7175126B0181800193DF7 /* ViewControllableExtensions.swift */; };
 		51F7175626B0193F00193DF7 /* HasSetupConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F7175526B0193F00193DF7 /* HasSetupConstraints.swift */; };
@@ -66,6 +70,10 @@
 		516D00C426AE970A0084552C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		516DAB31269E84CE006F8A1C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		516DAB35269E8D90006F8A1C /* AuthMangerMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMangerMocks.swift; sourceTree = "<group>"; };
+		51B12BDE26B7FECA008D2208 /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
+		51B12BDF26B7FECA008D2208 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		51B12BE026B7FECA008D2208 /* SignupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBuilder.swift; sourceTree = "<group>"; };
+		51B12BE126B7FECA008D2208 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
 		51B1556626AA840900B5F98A /* TodoRIBs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoRIBs.entitlements; sourceTree = "<group>"; };
 		51F7175126B0181800193DF7 /* ViewControllableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllableExtensions.swift; sourceTree = "<group>"; };
 		51F7175526B0193F00193DF7 /* HasSetupConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSetupConstraints.swift; sourceTree = "<group>"; };
@@ -179,6 +187,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		51B12BDD26B7FE85008D2208 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				51B12BDE26B7FECA008D2208 /* SignupRouter.swift */,
+				51B12BDF26B7FECA008D2208 /* SignupViewController.swift */,
+				51B12BE026B7FECA008D2208 /* SignupBuilder.swift */,
+				51B12BE126B7FECA008D2208 /* SignupInteractor.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		51F7174E26B014C300193DF7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +205,7 @@
 				88D90A4F2681988500E52BD7 /* AppStart */,
 				884EA49B268C288100747581 /* Root */,
 				88D90A5A26819B5000E52BD7 /* LoggedOut */,
+				51B12BDD26B7FE85008D2208 /* Signup */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -538,6 +558,8 @@
 			files = (
 				884EA4BF268C29A100747581 /* AppDelegate.swift in Sources */,
 				51589D75269BDA2700232F35 /* main.swift in Sources */,
+				51B12BE526B7FECA008D2208 /* SignupInteractor.swift in Sources */,
+				51B12BE326B7FECA008D2208 /* SignupViewController.swift in Sources */,
 				884EA49D268C296500747581 /* RootViewController.swift in Sources */,
 				88D90A5626819B4A00E52BD7 /* LoggedOutRouter.swift in Sources */,
 				88D90A5726819B4A00E52BD7 /* LoggedOutViewController.swift in Sources */,
@@ -549,11 +571,13 @@
 				88D90A5826819B4A00E52BD7 /* LoggedOutBuilder.swift in Sources */,
 				51F7175226B0181800193DF7 /* ViewControllableExtensions.swift in Sources */,
 				516DAB32269E84CE006F8A1C /* AuthManager.swift in Sources */,
+				51B12BE426B7FECA008D2208 /* SignupBuilder.swift in Sources */,
 				884EA4C1268C29B600747581 /* SceneDelegate.swift in Sources */,
 				51F7175626B0193F00193DF7 /* HasSetupConstraints.swift in Sources */,
 				5148B9F9269C7CC400DDD9C1 /* Logger.swift in Sources */,
 				884EA49A268C287900747581 /* RootInteractor.swift in Sources */,
 				88D90A5926819B4A00E52BD7 /* LoggedOutInteractor.swift in Sources */,
+				51B12BE226B7FECA008D2208 /* SignupRouter.swift in Sources */,
 				51589D732696037300232F35 /* RootComponent+Main.swift in Sources */,
 				884EA499268C287900747581 /* RootBuilder.swift in Sources */,
 			);

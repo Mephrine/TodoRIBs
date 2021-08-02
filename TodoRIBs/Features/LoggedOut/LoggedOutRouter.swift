@@ -17,10 +17,21 @@ protocol LoggedOutViewControllable: ViewControllable {
 }
 
 final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutViewControllable>, LoggedOutRouting {
+  
+  private let signupBuilder: SignupBuildable
+  private var signupRouting: SignupRouting?
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: LoggedOutInteractable, viewController: LoggedOutViewControllable) {
-        super.init(interactor: interactor, viewController: viewController)
-        interactor.router = self
+    override init(interactor: LoggedOutInteractable,
+                  viewController: LoggedOutViewControllable,
+                  signupBuilder: SignupBuildable) {
+      self.signupBuilder = signupBuilder
+      
+      super.init(interactor: interactor, viewController: viewController)
+      interactor.router = self
     }
+  
+  func routeToSignupRIB() {
+    let signupRouting = signupBuilder.build(withListener: interactor)
+  }
 }
