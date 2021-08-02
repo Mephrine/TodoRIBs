@@ -90,7 +90,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
   
   private func tryToLogin(email: String, password: String) {
     AuthManager.login(withEmail: email, password: password)
-      .observeOn(MainScheduler.instance)
+      .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .default))
       .subscribe { result in
         self.listener?.login()
       } onError: { error in

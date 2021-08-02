@@ -6,6 +6,7 @@
 //
 
 import RIBs
+import RxCocoa
 import RxSwift
 import SnapKit
 
@@ -160,13 +161,57 @@ final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, L
   }
   
   // MARK: - Configuring
-  
   private func bindUI() {
+    Observable.combineLatest(
+      emailTextField.rx.text.asObservable(),
+      passwordTextField.rx.text.asObservable()
+    ) {
+      !($0?.isEmpty ?? true) && !($1?.isEmpty ?? true)
+    }.bind(to: loginButton.rx.isEnabled)
+    .disposed(by: disposeBag)
+   
+    emailTextField.rx.text.orEmpty.asObservable()
+      .distinctUntilChanged()
+      .map{ $0.exceptsWhiteSpaceOrNewLine() }
+      .bind(to: emailTextField.rx.text)
+      .disposed(by: disposeBag)
     
+    passwordTextField.rx.text.orEmpty.asObservable()
+      .distinctUntilChanged()
+      .map{ $0.exceptsWhiteSpaceOrNewLine() }
+      .bind(to: emailTextField.rx.text)
+      .disposed(by: disposeBag)
+    
+    let loginValues = Observable.combineLatest(
+      emailTextField.rx.text.orEmpty,
+      passwordTextField.rx.text.orEmpty
+    )
+    
+    loginButton.rx.tap
+      .throttle(.microseconds(300), scheduler: MainScheduler.instance)
+      .withLatestFrom(loginValues)
+      .subscribe { [weak self] email, password in
+        guard let self = self else { return }
+        self.listener?.loginButtonTapped(email: email, password: password)
+      }.disposed(by: disposeBag)
   }
   
   internal func failedLogin(error: LoginError) {
+    let failedLoginAlert = UIAlertController(
+      title: "로그인 실패",
+      message: "잘못된 로그인 정보를 입력했습니다.",
+      preferredStyle: .alert
+    )
     
+    let okayButtonAction = UIAlertAction(title: "OK", style: .default)
+    failedLoginAlert.addAction(okayButtonAction)
+    present(failedLoginAlert, animated: true, completion: nil)
+  }
+}
+
+fileprivate extension String {
+  func exceptsWhiteSpaceOrNewLine() -> String {
+    return self.filter { !$0.isWhitespace && !$0.isNewline }
   }
 }
 
