@@ -143,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				5148B9F8269C7CC300DDD9C1 /* Logger.swift */,
-				516DAB31269E84CE006F8A1C /* AuthManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -180,30 +179,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		51F7174E26B014C300193DF7 /* Presentation */ = {
+		51F7174E26B014C300193DF7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				51F7175426B0190700193DF7 /* Protocols */,
-				88D90A4F2681988500E52BD7 /* AppStart */,
 				516D00C326AE96FE0084552C /* Base */,
+				88D90A4F2681988500E52BD7 /* AppStart */,
 				884EA49B268C288100747581 /* Root */,
 				88D90A5A26819B5000E52BD7 /* LoggedOut */,
 			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		51F7174F26B014D900193DF7 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		51F7175026B014DF00193DF7 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		51F7175326B0181F00193DF7 /* RIBs+Extensions */ = {
@@ -224,14 +208,49 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		51F7175926B7966700193DF7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				51F7175B26B796B300193DF7 /* Auth */,
+				51589D79269BFB8200232F35 /* Extension */,
+				51F7175A26B7967900193DF7 /* Presentation */,
+				5148B9F7269C7CB900DDD9C1 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		51F7175A26B7967900193DF7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				51F7175426B0190700193DF7 /* Protocols */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		51F7175B26B796B300193DF7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				516DAB31269E84CE006F8A1C /* AuthManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		51F7175C26B796DC00193DF7 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				51589D722696037300232F35 /* RootComponent+Main.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		884EA49B268C288100747581 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				51F7175C26B796DC00193DF7 /* Dependencies */,
 				884EA495268C287900747581 /* RootRouter.swift */,
 				884EA496268C287900747581 /* RootBuilder.swift */,
 				884EA497268C287900747581 /* RootInteractor.swift */,
 				884EA49C268C296500747581 /* RootViewController.swift */,
-				51589D722696037300232F35 /* RootComponent+Main.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -259,12 +278,9 @@
 		88D90A232681987400E52BD7 /* TodoRIBs */ = {
 			isa = PBXGroup;
 			children = (
-				51F7175026B014DF00193DF7 /* Data */,
-				51F7174F26B014D900193DF7 /* Domain */,
-				51F7174E26B014C300193DF7 /* Presentation */,
+				51F7175926B7966700193DF7 /* Core */,
+				51F7174E26B014C300193DF7 /* Features */,
 				51B1556626AA840900B5F98A /* TodoRIBs.entitlements */,
-				5148B9F7269C7CB900DDD9C1 /* Utils */,
-				51589D79269BFB8200232F35 /* Extension */,
 				88D90A282681987600E52BD7 /* Assets.xcassets */,
 				88D90A2D2681987600E52BD7 /* Info.plist */,
 				51589DBA269C109900232F35 /* GoogleService-Info.plist */,
