@@ -5,11 +5,14 @@ target 'TodoRIBs' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'RxSwift', '6.0'
+  pod 'RxDataSources', '5.0'
+  
   # Pods for TodoRIBs
-  pod 'RIBs'
+  pod 'RIBs',
+    :git => 'https://github.com/uber/RIBs.git',
+    :branch => 'master'
 #  pod 'Texture'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
 
   # UI
   pod 'SnapKit'
@@ -29,6 +32,6 @@ target 'TodoRIBs' do
     # Pods for testing
 
     pod 'Quick'
-    pod 'Nimble'
+    pod 'RxNimble'
   end
 end
